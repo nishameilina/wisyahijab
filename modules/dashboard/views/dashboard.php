@@ -26,7 +26,7 @@
 
   <div class="row text-center mt-3 ">
 
-    <?php foreach ($tbl_barang as $brg) : ?>
+    <?php foreach ($data->result() as $brg) : ?>
 
 <div class="card ml-3 mb-3 " style="width: 16rem;">
   <img src="<?php echo base_url(). "/uploads/" .$brg->gambar ?>." class="card-img-top" alt="...">
@@ -43,5 +43,8 @@
 
     <?php endforeach; ?>
 
+  </div>
+  <div class="container">
+    <?php echo $paging;?>
   </div>
 </div>
